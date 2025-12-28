@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sbi-dmri"
+version = "0.1.0"
+description = "Simulation-based inference toolbox for diffusion MRI forward models"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "J.P. Manzano Patron" }
+]
+dependencies = [
+  "numpy>=1.23",
+  "torch>=2.0",
+  "sbi>=0.22",
+  "scipy>=1.9",
+  "pandas>=2.0",
+  "nibabel>=5.1",
+]
+
+[tool.setuptools]
+package-dir = {"" = "."}
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["models*", "inference*", "priors*", "training*", "utils*", "tools*"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501"]
+target-version = "py310"
