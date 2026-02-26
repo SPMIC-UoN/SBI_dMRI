@@ -5,5 +5,4 @@ https://www.sciencedirect.com/science/article/pii/S1361841525001276
 
 If you use this code, please cite the paper.
 
-Note: This repository is currently being updated. A more current and more powerful
-version in a different repository will be published soon.
+The file example_1fib.ipynb provides a tutorial on the first steps to use the toolbox and perform SBI on the ball&sticks model.
